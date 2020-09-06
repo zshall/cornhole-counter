@@ -1,0 +1,39 @@
+<template>
+  <require from="./counter.scss"></require>
+  <require from="./counter-module"></require>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 p-2">
+        <a class="float-left" href="#" click.delegate="reset()"><i class="fas fa-undo"></i></a>
+        <a class="float-right" route-href="route: settings"><i class="fas fa-cog"></i></a>
+        <div class="text-center">Cornhole Counter</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-9">
+        <div class="team-score">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" css="width: ${getPercent(state.team1Score)}; background: ${state.bag1Color}"></div>
+          </div>
+        </div>
+        <div class="team-score">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" css="width: ${getPercent(state.team2Score)}; background: ${state.bag2Color}"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="target-caption">Target:</div>
+        <div class="target-score">${state.targetScore}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 position-absolute s-b s-l" css="background: ${state.bag1Color}; color: ${state.bag1TextColor}">
+        <counter-module score.two-way="state.team1Score"></counter-module>
+      </div>
+      <div class="col-6 position-absolute s-b s-r" css="background: ${state.bag2Color}; color: ${state.bag2TextColor}">
+        <counter-module score.two-way="state.team2Score"></counter-module>
+      </div>
+    </div>
+  </div>
+</template>

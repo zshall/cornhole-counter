@@ -1,0 +1,24 @@
+counter-module {
+  .container-fluid {
+    h1 {
+      font-size: 5em;
+      text-align: center;
+    }
+
+    .btn-plus-3 {
+      height: 15vh;
+    }
+
+    .btn-plus-1 {
+      height: 20vh;
+    }
+
+    button {
+      font-size: 2.5em;
+
+      &.btn-danger {
+        font-size: 1.5em;
+      }
+    }
+  }
+}

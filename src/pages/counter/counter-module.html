@@ -1,0 +1,15 @@
+<template>
+  <require from="./counter-module.scss"></require>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 p-4">
+        <h1>${score}</h1>
+      </div>
+      <div class="col-12 controls p-2">
+        <button class="btn btn-block p-2 btn-danger" click.delegate="minusOne()" disabled.bind="score <= 0">-1</button>
+        <button class="btn btn-block p-2 btn-success btn-plus-3" click.delegate="plusThree()">+3</button>
+        <button class="btn btn-block p-2 btn-light btn-plus-1" click.delegate="plusOne()">+1</button>
+      </div>
+    </div>
+  </div>
+</template>

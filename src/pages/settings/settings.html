@@ -1,0 +1,35 @@
+<template>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 p-2">
+        <div class="text-center">Settings</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 p-2" css="background: ${bag1Color}; color: ${bag1TextColor}">
+        <label for="bagColor1">Bag color 1:</label>
+        <div id="bagColor1"></div>
+      </div>
+      <div class="col-6 p-2" css="background: ${bag2Color}; color: ${bag2TextColor}">
+        <label for="bagColor2">Bag color 2:</label>
+        <div id="bagColor2"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 p-2">
+        <label for="targetScore">Target score:</label>
+        <input type="number" min="0" id="targetScore" class="form-control" value.bind="targetScore" pattern="\d*" />
+      </div>
+      <div class="col-12 p-2">
+        <label for="targetScore">Over limit, go back to:</label>
+        <input type="number" min="0" id="targetScore" class="form-control" value.bind="overGoBack" pattern="\d*" />
+      </div>
+      
+      <div class="col-12 p-2">
+        <button class="btn btn-danger btn-block" click.delegate="reset()">Reset Settings</button>
+        <button class="btn btn-secondary btn-block" click.delegate="cancel()">Cancel</button>
+        <button class="btn btn-primary btn-block" click.delegate="save()" disabled.bind="canSave">Save</button>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Allan&family=Bangers&family=Chewy&display=swap');
+
+html, body {
+  height: 100%;
+  font-family: 'Chewy', cursive;
+}
+
+router-view {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
